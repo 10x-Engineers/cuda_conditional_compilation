@@ -2,14 +2,21 @@
 #define PIPELINE_H
 
 #include "add.h"
-#include "subtract.h"
 #include "multiply.h"
+
+#ifdef CUDA_PRO
+#include "subtract.h"
+#endif
 
 class Pipeline {
 private:
     Addition* addObj;
-    Subtraction* subObj;
     Multiplication* mulObj;
+    
+#ifdef CUDA_PRO
+    Subtraction* subObj;
+#endif
+    
     int width;
     int height;
     
