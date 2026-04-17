@@ -1,6 +1,14 @@
+# CUDA intermediate files
 *.i
 *.ii
 *.gpu
 *.ptx
 *.cubin
 *.fatbin
+
+# Shared libraries
+*.so
+
+# Ignore any folder named build
+build/
+**/build/
